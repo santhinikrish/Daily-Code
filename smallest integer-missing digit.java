@@ -1,4 +1,9 @@
-
+/*
+input: 4037
+output: 125689
+input: 764532
+output: 1089
+*/
 import java.util.*;
 public class Hello {
 

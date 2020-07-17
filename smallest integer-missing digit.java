@@ -1,4 +1,9 @@
-
+/*
+input: 4037
+output: 125689
+input: 764532
+output: 1089
+*/
 import java.util.*;
 public class Hello {
 
@@ -22,6 +27,40 @@ public class Hello {
 	}
 }
     (or)
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		List<Integer> arr = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		for(int ctr = 0 ; ctr <10 ; ctr ++)
+		    arr.add(ctr);
+	    for(char ch : sc.next().toCharArray())
+	    {
+	        int val = Integer.valueOf(ch+"");
+	        if (arr.indexOf(val)!=-1)
+	            arr.remove(arr.indexOf(val));
+	    }
+        long ans = 0 ;
+        boolean flag = false;
+        for(int val : arr)
+        {
+            ans = ans*10+val;
+            if (flag)
+            {
+                ans*=10;
+                flag = false;
+            }
+            if (val == 0)
+                flag = true;
+        }
+        System.out.print(arr.size()==0?-1:ans);
+	}
+}
+
+		(or)
+
 
 import java.util.*;
 public class Hello{

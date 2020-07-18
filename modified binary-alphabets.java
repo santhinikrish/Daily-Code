@@ -25,14 +25,12 @@ public class Hello {
         int n=a.length;
         for(int i=0;i<n;i++){
             if(a[i]=='1'){
-                a[i]=c1;
-                c1++;
+                a[i]=c1++;
             }
         }
         for(int i=n-1;i>=0;i--){
             if(a[i]=='0'){
-                a[i]=c2;
-                c2++;
+                a[i]=c2++;
             }
         }
         System.out.print(a);

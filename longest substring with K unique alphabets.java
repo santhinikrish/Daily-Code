@@ -33,22 +33,26 @@ public class Hello {
 	}
 }
 		(or)
-		
+
 import java.util.*;
 class Main
 {
 	public static String lonSubstr(String a, int k)
 	{
+<<<<<<< HEAD
 		int end=0, begin=0;
+=======
+		int end=0,begin=0;
+>>>>>>> 3272b1ac4c9ef9218ae2bd6e5e2869453f7c3df7
 		Set<Character> s= new HashSet<>();
 		int[]  b= new int[126];
 		for (int i=0, j=0; j<a.length();j++)
 		{
 			s.add(a.charAt(j));
 			b[a.charAt(j)]++;
-			while (s.size() > k)
+			while (s.size()>k)
 			{
-				if (--b[a.charAt(i)] == 0) {
+				if (--b[a.charAt(i)]==0) {
 					s.remove(a.charAt(i));
 				}
 				i++;
@@ -59,15 +63,15 @@ class Main
 				begin=i;
 			}
 		}
-		return a.substring(begin,end + 1);
+		return a.substring(begin,end+1);
 	}
 
 	public static void main(String[] args)
 	{
-	      Scanner sc=new Scanner(System.in);
-		    String str =sc.next();
-		    int k =sc.nextInt();
-        String a=lonSubstr(str, k);
-        System.out.print(a.length());
+	      	Scanner sc=new Scanner(System.in);
+		String str =sc.next();
+		int k =sc.nextInt();
+        	String a=lonSubstr(str, k);
+        	System.out.print(a.length());
 	}
 }

@@ -39,11 +39,7 @@ class Main
 {
 	public static String lonSubstr(String a, int k)
 	{
-<<<<<<< HEAD
-		int end=0, begin=0;
-=======
 		int end=0,begin=0;
->>>>>>> 3272b1ac4c9ef9218ae2bd6e5e2869453f7c3df7
 		Set<Character> s= new HashSet<>();
 		int[]  b= new int[126];
 		for (int i=0, j=0; j<a.length();j++)

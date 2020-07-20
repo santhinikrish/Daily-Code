@@ -44,9 +44,8 @@ public class Hello {
         String s1=sc.nextLine();
         char s[]=s1.toCharArray();
         int n=s.length,f=0,c=0;
-        String a;
         for(int i=0;i<n;i++){
-            a="";
+            String a="";
             a+=s[i];
             for(int j=i+1;j<n;j++){
                 a+=s[j];

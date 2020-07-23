@@ -52,3 +52,42 @@ public class Main {
         }
 	}
 }
+    (or)
+    
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+	 Scanner sc=new Scanner( System .in);
+	 int n=sc.nextInt();
+	 Map<String,String> map=new HashMap<>();
+	 List<String> al=new ArrayList<>();
+	 List<String> li=new ArrayList<>();
+	 for(int i=0;i<n;i++){
+	     String t1=sc.next();
+	     String t2=sc.next();
+	     map.put(t1,t2);
+	     al.add(t1);
+	     li.add(t2);
+	 }
+	 String src="",des="";
+	 for(String i:al){
+	     if(!li.contains(i)){
+	         src=""+i;
+	         break;
+	     }
+	 }
+	 for(String i:li){
+	     if(!al.contains(i)){
+	         des=""+i;
+	         break;
+	     }
+	 }
+	 for(int i=0;i<n;i++){
+	 System.out.println(src+" to "+map.get(src));
+	 src=map.get(src);
+	 }
+
+	}
+}

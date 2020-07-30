@@ -27,10 +27,10 @@ public class Hello {
         int pos=0,neg=0;
         for(int i=0;i<n;i++){
             a[i]=sc.nextInt();
-            if(a[i]<0){
-                neg++;
-            }else{
+            if(a[i]>0){
                 pos++;
+            }else{
+                neg++;
             }
         }
         int team=0;

@@ -44,14 +44,25 @@ public class Hello {
             }
             d+=s;
             for(int j=0;j<d.length();j++){
-                if(d.charAt(j)=='0'){
+                if(d.charAt(j)=='0')
                     ds+='1';
-                }else{
+                else
                     ds+='0';
-                }
             }
-            long ans=Long.parseLong(ds,2);
-            System.out.println(ans+" ");
+            System.out.println(Long.parseLong(ds,2)+" ");
         }
+	  }
+}
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tc = sc.nextInt();
+		for(int i = 0 ; i < tc ; i++){
+		    int val = sc.nextInt();
+		    System.out.println((long)Integer.MAX_VALUE+(val^Integer.MAX_VALUE)+1);
+		}
 	}
 }

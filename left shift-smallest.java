@@ -39,3 +39,21 @@ public class Hello {
        System.out.print(c);
 	}
 }
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		int min = Integer.parseInt(s);
+		for(int i=0;i<s.length();i++)
+		{
+		    char ch = s.charAt(0);
+		    s = s.substring(1,s.length())+ch;
+		    if(Integer.parseInt(s)<min)min=Integer.parseInt(s);
+		}
+		System.out.print(min);
+	}
+}

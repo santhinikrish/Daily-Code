@@ -50,38 +50,20 @@ public class Hello {
         }
         for(int i=0;i<n;i++){
             long sum=0;
-            if(i==0){
-                long r=a[i]%10;
-                for(int j=i+1;j<n;j++){
-                    if(a[j]%10==r){
-                        sum+=a[j];
-                    }
+            long r=a[i]%10;
+            for(int j=i+1;j<n;j++){
+                if(a[j]%10==r){
+                    sum+=a[j];
                 }
-                System.out.println("0"+" "+sum);
-            }else if(i==n-1){
-                long r=fir(a[i]);
-                for(int j=i-1;j>=0;j--){
-                    if(a[j]%10==r){
-                        sum+=a[j];
-                    }
-                }
-                System.out.println(sum+" "+"0");
-            }else{
-                long r=a[i]%10;
-                for(int j=i+1;j<n;j++){
-                    if(a[j]%10==r){
-                        sum+=a[j];
-                    }
-                }
-                long sum1=0;
-                long r1=fir(a[i]);
-                for(int j=i-1;j>=0;j--){
-                    if(a[j]%10==r1){
-                        sum1+=a[j];
-                    }
-                }
-                System.out.println(sum1+" "+sum);
             }
+            long sum1=0;
+            long r1=fir(a[i]);
+            for(int j=i-1;j>=0;j--){
+                if(a[j]%10==r1){
+                    sum1+=a[j];
+                }
+            }
+            System.out.println(sum1+" "+sum);
         }
 	}
 }

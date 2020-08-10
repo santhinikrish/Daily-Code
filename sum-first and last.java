@@ -49,15 +49,13 @@ public class Hello {
             a[i]=sc.nextLong();
         }
         for(int i=0;i<n;i++){
-            long sum=0;
-            long r=a[i]%10;
+            long sum=0,r=a[i]%10;
             for(int j=i+1;j<n;j++){
                 if(a[j]%10==r){
                     sum+=a[j];
                 }
             }
-            long sum1=0;
-            long r1=fir(a[i]);
+            long sum1=0,r1=fir(a[i]);
             for(int j=i-1;j>=0;j--){
                 if(a[j]%10==r1){
                     sum1+=a[j];

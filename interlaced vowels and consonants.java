@@ -19,6 +19,36 @@ Output: AEIOU
 
 import java.util.*;
 public class Hello {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+		ArrayList<Character> vowel=new ArrayList<>();
+		ArrayList<Character> consonant=new ArrayList<>();
+		for(char ch:sc.nextLine().toCharArray()){
+		    if("AEIOUaeiou".contains(ch+"")){
+		        vowel.add(ch);
+		    }
+		    else
+		    {
+		        consonant.add(ch);
+		    }
+		}
+		Collections.reverse(consonant);
+		int maxLen=Math.max(vowel.size(),consonant.size());
+		for(int index=0;index<maxLen;index++){
+		    if(index<vowel.size()){
+		        System.out.print(vowel.get(index));
+		    }
+		    if(index<consonant.size()){
+		        System.out.print(consonant.get(index));
+		    }
+		}
+
+	}
+}
+
+import java.util.*;
+public class Hello {
     public static boolean isVowel(char c){
         if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){
             return true;

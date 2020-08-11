@@ -9,7 +9,6 @@ The binary representation of 10 is 1010.
 The binary representation of 12 is 1100.
 Here 1010 can be rearranged as 1100.
 So YES is printed as the output.
-
 Example Input/Output 2:
 Input:
 10 3
@@ -21,7 +20,6 @@ The binary representation of 3 is 11.
 Here 1010 can be rearranged as 0011.
 Here both 0011 and 11 represent the decimal value 3.
 So YES is printed as the output.
-
 Example Input/Output 3:
 Input:
 14 26

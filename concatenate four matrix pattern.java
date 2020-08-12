@@ -62,21 +62,17 @@ public class Main {
         int n=sc.nextInt();
         int a1[][]=new int[n][n];
         int a[][]=new int[n+n][n+n];
+        int b[][]=new int[n+n][n+n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 a1[i][j]=sc.nextInt();
                 a[i][j]=a1[i][j];
+                b[i][j]=a[i][j];
             }
         }
         for(int i=0,k=0;i<n&&k<n;i++,k++){
             for(int j=n,l=0;j<n+n&&l<n;j++,l++){
-                a[i][j]=a1[k][l];
-            }
-        }
-        int b[][]=new int[n+n][n+n];
-        for(int i=0;i<n+n;i++){
-            for(int j=0;j<n+n;j++){
-                b[i][j]=a[i][j];
+                b[i][j]=a1[k][l];
             }
         }
         for(int i=n,k=0;i<n+n&&k<n+n;i++,k++){

@@ -50,6 +50,7 @@ public class Hello {
                     c1++;
                 }
             }
+
             b[i]=c1;
             c[i]=i;
         }

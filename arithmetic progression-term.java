@@ -61,10 +61,38 @@ public class Hello {
                 break;
             }
         }
+        System.out.println(first);
         if(sec==0){
-            System.out.print(first+"\n"+"Not Found"+"\n"+Math.abs(th1-th2));
+            System.out.println("Not Found");
         }else{
-            System.out.print(first+"\n"+sec+"\n"+Math.abs(th1-th2));
+            System.out.println(sec);
         }
+        System.out.println(Math.abs(th1-th2));
+	}
+}
+
+
+import java.util.*;
+public class Hello
+{
+    public static void main(String[] args)
+    {
+		Scanner sc=new Scanner(System.in);
+		int F=sc.nextInt();
+		int D=sc.nextInt();
+		int N=sc.nextInt(),T=sc.nextInt(),X=sc.nextInt(),Y=sc.nextInt();
+		List<Integer> al=new ArrayList<>();
+		int max=Math.max(N,Math.max(X,Y)),val=F;
+		for(int index=0;index<10000;index++)
+		{
+		    al.add(val);
+		    val+=D;
+		}
+		System.out.println(al.get(N-1));
+		if(al.contains(T))
+		System.out.println(al.indexOf(T)+1);
+		else
+		System.out.println("Not Found");
+		System.out.print(Math.abs(al.get(X-1)-al.get(Y-1)));
 	}
 }

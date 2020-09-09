@@ -25,23 +25,19 @@ import java.util.*;
 public class Hello {
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int r=sc.nextInt(),b=sc.nextInt(),n=sc.nextInt();
-        if(n>r && n>b){
-            int t=n-r;
-            while((t+r)<=n){
-                System.out.println(r+" "+t);
-                r--;t++;
-                if(r==0 || b==t-1) break;
-            }
-        }else{
-            int t=0;
-            r=n;
-            while((t+r)<=n && b>=t){
-                System.out.println(r+" "+t);
-                r--;t++;
-                if(r==-1 || t-1==n) break;
-            }
-        }
-	  }
+		//Your Code Here
+		Scanner scan=new Scanner(System.in);
+		int r,b,c;
+		r=scan.nextInt();
+		b=scan.nextInt();
+		c=scan.nextInt();
+		for(int i=r;i>=0;i--)
+		{
+		    int j=c-i;
+		    if(j>=0 && j<=b)
+		    {
+		        System.out.println(i+" "+j);
+		    }
+		}
+	}
 }

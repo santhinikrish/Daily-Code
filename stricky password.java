@@ -26,16 +26,16 @@ public class Main {
     public static void main(String[] args) {8
         Scanner sc=new Scanner(System.in);
         char s[]=sc.next().toCharArray();
-        int low=0,upp=0,spl=0,dig=0,count=0;
+        int low=0,upp=0,spl=0,dig=0;
         for(int i=0;i<s.length;i++){
             if(Character.isLowerCase(s[i])){
-                low++;count++;
+                low++;
             }else if(Character.isUpperCase(s[i])){
-                upp++;count++;
+                upp++;
             }else if(Character.isDigit(s[i])){
-                dig++;count++;
+                dig++;
             }else{
-                spl++;count++;
+                spl++;
             }
         }
         if(s.length>=8 && low>=1 && upp>=1 && dig>=1 && spl>=1){

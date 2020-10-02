@@ -38,8 +38,6 @@ public class Hello {
                     if(a[i]==a[j]) c1++;
                 }
                 c[k++]=c1;
-            }
-            for(int i=0;i<b.length;i++){
                 int c2=0;
                 for(int j=i+1;j<b.length;j++){
                     if(b[i]==b[j]) c2++;

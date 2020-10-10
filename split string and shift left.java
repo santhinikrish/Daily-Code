@@ -40,6 +40,7 @@ public class Hello {
         int n=sc.nextInt(),k=0;
         for(int i=0;i<s.length();i+=n){
             if(i+n<=s.length()){
+                if(k+1>n) k=0;
                 String a=s.substring(i,i+n);
                 left(a,k);
                 k++;
@@ -56,5 +57,51 @@ public class Hello {
 	public static void left(String s,int k){
 	    String a=s.substring(k)+s.substring(0,k);
 	    System.out.println(a);
+	}
+}
+
+
+import java.util.*;
+public class Hello {
+
+    public static String remover(String str,int a){
+        return str.substring(0,a)+str.substring(a+1);
+    }
+
+    public static void Substr(String a,int sep){
+        for(int i=0;i<a.length();i+=sep){
+            String strr;
+            if (i+sep>=a.length()) {
+               strr = a.substring(i);
+
+            }
+            else
+            {
+                strr = a.substring(i,i+sep);
+
+            }
+
+            for(int k=0;k<i/sep;k++){
+                char s = strr.charAt(0);
+                strr = remover(strr,0) + s;
+            }
+            if(strr.length() < sep){
+                strr += "*".repeat((sep-strr.length()));
+            }
+            System.out.println(strr);
+        }
+
+    }
+
+    public static void main(String[] args) {
+		//Your Code Here
+		String[] s;
+		String str;
+		Scanner sc = new Scanner(System.in);
+		s = sc.nextLine().split(" ");
+		int sep = Integer.parseInt(s[1]);
+		str = s[0];
+		Substr(str,sep);
+
 	}
 }

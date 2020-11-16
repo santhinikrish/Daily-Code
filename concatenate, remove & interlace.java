@@ -1,3 +1,34 @@
+/*
+Example Input/Output 1:
+Input:
+#ProGramming#
+mango#
+-
+Output:
+PrGrmi#
+Explanation:
+S1 = #ProGramming# S2 = mango# CH = -
+So the characters of S2 must be removed in the string S1 (from left to right).
+After removing the characters of S2 in S1, the string S1 becomes PrGrmi#.
+Hence the output is PrGrmi#
+
+Example Input/Output 2:
+Input:
+Skill
+Rack
++
+Output:
+SkillRack
+
+Example Input/Output 3:
+Input:
+C@rtOOn
+Spider10
+*
+Output:
+CS@pritdOeOrn10
+*/
+
 import java.util.*;
 public class Hello {
 

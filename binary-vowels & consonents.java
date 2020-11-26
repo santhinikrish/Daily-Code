@@ -18,7 +18,7 @@ public class Hello {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        String s=sc.next(),a=Long.toBinaryString(Long.parseLong(s));
+        String a=Long.toBinaryString(Long.parseLong(sc.next()));
         char b[]=a.toCharArray(),c[]=new char[]{'a','e','i','o','u'},d='a';
         int k=0;
         for(int i=0;i<a.length();i++)

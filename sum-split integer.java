@@ -25,9 +25,9 @@ public class Hello {
         Scanner sc=new Scanner(System.in);
         long n=sc.nextLong(),sum=0L;
         for(int i=0;i<n;i++){
-            char[] c=sc.next().toCharArray();
-            sum+=Long.parseLong(new String(c).substring(0,c.length/2))+Long.parseLong(new String(c).substring(c.length/2));
+            String c=sc.next();
+            sum+=Long.parseLong(c.substring(0,c.length()/2))+Long.parseLong(substring(c.length()/2));
         }
         System.out.print(sum);
-	}
+	  }
 }

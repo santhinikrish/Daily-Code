@@ -70,17 +70,17 @@ public class Hello {
         }
         p=x;q=y;
         while(p>=0 && q<m){
-            s3+=a[p][q];
+            s2+=a[p][q];
             p--;q++;
         }
         p=x;q=y;
         while(p<n && q<m){
-            s4+=a[p][q];
+            s3+=a[p][q];
             p++;q++;
         }
         p=x;q=y;
         while(p<n && q>=0){
-            s2+=a[p][q];
+            s4+=a[p][q];
             p++;q--;
         }
         String s[]=new String[]{s1,s2,s3,s4};

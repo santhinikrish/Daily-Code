@@ -27,13 +27,8 @@ public class Hello {
         int n=sc.nextInt(),m=sc.nextInt(),k=sc.nextInt();
         ArrayList<String> l=new ArrayList<String>(Arrays.asList("abcdefghijklmnopqrstuvwxyz".split("")));
         for(int i=0;i<k;i++){
-            if(i%2==0){
-                System.out.print(l.get((n-1)%l.size()));
-                l.remove((n-1)%l.size());
-            }else{
-                System.out.print(l.get((m-1)%l.size()));
-                l.remove((m-1)%l.size());
-            }
+            if(i%2==0) System.out.print(l.remove((n-1)%l.size()));
+            else System.out.print(l.remove((m-1)%l.size()));
         }
 	  }
 }

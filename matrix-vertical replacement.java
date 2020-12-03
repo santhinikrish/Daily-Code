@@ -112,3 +112,48 @@ public class Hello {
         }
 	  }
 }
+
+import java.util.*;
+public class Hello {
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int r = sc.nextInt();
+		int c = sc.nextInt();
+		char[][] a = new char[r][c];
+		for(int i=0;i<r;i++) {
+		    for(int j=0;j<c;j++) {
+		        a[i][j] = sc.next().charAt(0);
+		    }
+		}
+		String s = sc.next();
+		int x=-1,y=-1;
+		for(int i=0;i<r;i++) {
+		    for(int j=0;j<c;j++) {
+		        if(a[i][j]==s.charAt(0)) {
+		            x = i;
+		            y = j;
+		            break;
+		        }
+		    }
+		    if(x!=-1) {
+		        break;
+		    }
+		}
+		for(int i=0;i<s.length();i++) {
+		    a[x++][y] = s.charAt(i);
+		    if(x==r) {
+		        x = 0;
+		        y++;
+		    }
+		    if(y==c) {
+		        y = 0;
+		    }
+		}
+		for(int i=0;i<r;i++) {
+		    for(int j=0;j<c;j++) {
+		        System.out.print(a[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+	}
+}

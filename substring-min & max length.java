@@ -37,7 +37,7 @@ public class Hello {
 		        String a=s.substring(i,k+1);
 		        if(a.length()>=m && a.length()<=n){
 		            for(int j=0;j<a.length();j++)
-		                 l.add(str.charAt(j));
+		                 l.add(a.charAt(j));
             }
 		        if(l.size()==x){
 		            System.out.print("YES");

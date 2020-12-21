@@ -19,6 +19,22 @@ import java.util.*;
 public class Hello {
 
     public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String S=sc.nextLine();
+		for(char ch='a';ch<='z';ch++)
+    {
+		    if(!S.contains(ch+""))
+        {
+		        System.out.print(ch);
+		    }
+		 }
+	}
+}
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
 		//Your Code Here
         Scanner sc=new Scanner(System.in);
         char s[]=sc.next().toCharArray();
@@ -36,7 +52,6 @@ public class Hello {
         }
     }
 }
-
 
 import java.util.*;
 public class Hello {

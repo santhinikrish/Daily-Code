@@ -117,3 +117,66 @@ public class Hello {
 		}
 	}
 }
+
+import java.util.*;
+public class Hello {
+    static Scanner sc=new Scanner(System.in);
+    static int row,col;
+    static char ch[][]=new char[50][50];
+
+    public static void main(String[] args)
+    {
+        row=sc.nextInt();
+        col=sc.nextInt();
+		for(int i=0;i<row;i++)
+		{
+		    for(int j=0;j<col;j++)
+		    {
+		        ch[i][j]=sc.next().charAt(0);
+		    }
+		}
+		int a=sc.nextInt()-1,b=sc.nextInt()-1,c=sc.nextInt()-1,d=sc.nextInt()-1,e=sc.nextInt()-1,f=sc.nextInt()-1;
+        connect(a,b,c,d);
+        connect(c,d,e,f);
+        connect(a,b,e,f);
+   	for(int i=0;i<row;i++)
+		{
+		    for(int j=0;j<col;j++)
+		    {
+		    System.out.print(ch[i][j]+" ");
+		    }
+		    System.out.println();
+		}
+
+	}
+	public static void connect(int startx,int starty,int endx,int endy)
+	{
+	    int row1=startx;
+	    int col1=starty;
+
+	    while(true)
+	    {   ch[row1][col1]='*';
+	        if(row1==endx && col1==endy)
+	        {
+	            break;
+	        }
+	        if(startx>endx)
+	        {
+	            row1--;
+	        }
+	        else if(startx<endx)
+	        {
+	            row1++;
+	        }
+	        if(starty>endy)
+	        {
+	            col1--;
+	        }
+	        else if(starty<endy)
+	        {
+	            col1++;
+	        }
+	    }
+	}
+
+}
